@@ -136,7 +136,8 @@ sealed class CubeScreen : Screen
         if (bar < 0.0)
         {
           var f = MathF.Abs(bar / barWidth);
-          lineColor = HSV2RGB(new(0.6F, 1F - 0.6F * f, 1.0F * f));
+          var dist = 0.3F + i * 0.5F;
+          lineColor = HSV2RGB(new(0.6F, 1F - 0.6F * f, 1.0F * f * dist));
         }
       }
 
