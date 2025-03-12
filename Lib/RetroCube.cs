@@ -86,7 +86,7 @@ sealed class CubeScreen : Screen
     var letterOffsetY = (int)(Math.Cos(ts * 0.7F) * canvas.Height / 7) - canvas.Height / 19;
     var scaleZ = 1.2F * MathF.Sin(ts * 0.8F);
 
-    var colorHsv = new Vector3(0.3F, 0.7F, 0.5F + scaleZ / 3F);
+    var colorHsv = new Vector3(0.5F, 0.4F, 0.4F + scaleZ / 3F);
     var color = HSV2RGB(colorHsv);
 
     for (var i = 0; i < vertices.Count(); i++)
@@ -156,7 +156,7 @@ sealed class CubeScreen : Screen
     var yDistSpeed = 3F;
     var xOffset = (int)(canvas.Width / 3.5);
     var yStart = (int)(canvas.Height / 2.2 + 2F * Sin(time * 2F)); // 8.2
-    var logoColor = HSV2RGB(new(0.6F - 0.1F * MathF.Cos((float)time * 5F), 0.4F - 0.1F * MathF.Cos((float)time * 5F), 1.0F - 0.3F * MathF.Sin((float)time * 5F)));
+    var logoColor = HSV2RGB(new(0.6F - 0.1F * MathF.Cos((float)time * 5F), 0.2F - 0.1F * MathF.Cos((float)time * 5F), 1.0F - 0.3F * MathF.Sin((float)time * 5F)));
 
     var yOffset = yStart + (int)(yDistSize * Sin(time * yDistSpeed + 0.0F));
     foreach (var dot in logoI)
